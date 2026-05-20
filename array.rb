@@ -10,13 +10,13 @@ while i<ia.length
 end
 puts
 
-ia.each do [i]
+ia.each do |i|
     print i.to_s + ","
 end
 puts
 
-xa = [1, 3.5, "Ruby", 5]
-xa.each_with_index do [i, idx]
+xa = [1, 3.5, "Ruby", 5, [3,5]]
+xa.each_with_index do |i, idx|
     puts [i, idx]
 end
 
