@@ -17,8 +17,12 @@ class Main {
         int x=5;
         while(x>0) {
             System.out.println("#");
-            x++;
+            x--;
         }
+         System.out.println();
+         for(int i=0; i<5; i++){
+            System.out.println("*");
+         }
          System.out.println();
     }
 }
