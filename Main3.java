@@ -1,7 +1,8 @@
+import java.util.*;
+
 public class Main3 {
     public static void main(String[] args) {
-        for (String s: args) {
-            System.out.println(s);
-        }
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
     }
 }
