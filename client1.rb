@@ -3,12 +3,17 @@
 
 require 'socket'
 
+# http://www.is.kyusan-u.ac.jp/
+
 host = 'www.is.kyusan-u.ac.jp'
 port = 'http'
 path = '/~toshi/'
 
 sock = TCPSocket.new host, port
-cmd = 'GET ' + path + " HTTP/1.1\r\nHost: " + host + "\r\n\r\n"
+cmd  = "GET #{path} HTTP/1.1\r\n"
+cmd += "Host: #{host}\r\n"
+cmd += "Connection: close\r\n"
+cmd += "\r\n"
 pp cmd
 sock.print cmd
 
