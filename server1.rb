@@ -4,14 +4,18 @@
 require 'socket'
 
 def server s
-  cmd,path,ver = s.gets.split " "
-  pp [cmd, path, ver]
-  s.puts cmd
-  while line = s.gets
-    pp line
-    s.puts line
-    break if line == "\r\n"
+  cmd, path, ver = s.gets.split " "
+  # HTTP/1.1 として正しく返答
+  # 
+  if path == "/"
+    pp "INDEX"
+    s.puts "index"
+  else
+    pp "OTHER"
+    s.puts "other"
   end
+  s.close
+end
   s.close
 end
 
