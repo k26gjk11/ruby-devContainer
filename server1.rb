@@ -4,16 +4,14 @@
 require 'socket'
 
 def server s
-  cmd, path, ver = s.gets.split " "
-  if path == "/"
-    pp "INDEX"
-    s.puts "index"
-  else
-    pp "OTHER"
-    s.puts "other"
+  cmd,path,ver = s.gets.split " "
+  pp [cmd, path, ver]
+  s.puts cmd
+  while line = s.gets
+    pp line
+    s.puts line
+    break if line == "\r\n"
   end
-  s.close
-end
   s.close
 end
 
