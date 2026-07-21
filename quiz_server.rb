@@ -14,6 +14,12 @@ def server s
   quiz.each do |q|
     
     s.puts q[0]
+    answer = s.gets.chomp
+    if answer == q[1]
+      s.puts "正解!!"
+    else
+      s.puts "不正解...!"
+    end
   end
   
 end
