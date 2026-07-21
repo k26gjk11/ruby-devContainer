@@ -3,3 +3,8 @@
 #
 
 require 'socket'
+
+host = "localhost"
+port = 8080
+
+sock = TCPSocket.new host, port
