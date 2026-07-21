@@ -8,3 +8,7 @@ host = "localhost"
 port = 8080
 
 sock = TCPSocket.new host, port
+
+3.times do
+  puts sock.gets
+end
