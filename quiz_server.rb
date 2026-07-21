@@ -5,6 +5,17 @@
 require 'socket'
 
 def server s
+
+  quiz = [
+  ["1+1は？","2"],["東京スカイツリーの高さは？","634m"],["「Ruby」の開発者は？（ひらがなで）","まつもとゆきひろ"]
+  ]
+
+  score = 0
+
+  quiz.each do |q|
+    
+    s.puts q[0]
+  end
   
 end
 
