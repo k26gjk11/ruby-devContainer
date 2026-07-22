@@ -26,6 +26,11 @@ def server s
   
 end
 
+s.puts "あなたの正解数は#{score}問です!"
+
+s.close
+end
+
 gs = TCPServer.open(8080)
 
 loop do
