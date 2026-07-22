@@ -10,9 +10,8 @@ def server s
   ["1+1は？","2"],["東京スカイツリーの高さは何m？数字のみで可","634"],["「Ruby」の開発者は？（ひらがなで）","まつもとゆきひろ"]
   ]
 
-
+  score = 0
   quiz.each do |q|
-    score = 0
     
     s.puts q[0]
     answer = s.gets.chomp
@@ -23,12 +22,8 @@ def server s
       s.puts "不正解...!"
     end
   end
-  
-end
-
-s.puts "あなたの正解数は#{score}問です!"
-
-s.close
+  s.puts "あなたの正解数は#{score}問です!"
+  s.close
 end
 
 gs = TCPServer.open(8080)
