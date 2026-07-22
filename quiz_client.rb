@@ -16,3 +16,7 @@ sock = TCPSocket.new host, port
   sock.puts answer
   puts sock.gets
 end
+
+puts sock.gets
+
+sock.close
